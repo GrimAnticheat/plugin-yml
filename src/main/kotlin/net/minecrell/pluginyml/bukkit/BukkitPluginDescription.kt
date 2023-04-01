@@ -40,7 +40,7 @@ class BukkitPluginDescription(project: Project) : PluginDescription {
     @Input @Optional @JsonProperty("api-version") var apiVersion: String? = null
     @Input var name: String? = null
     @Input var version: String? = null
-    @Input var main: String? = null
+    @Input var main: String? = nullnet.minecrell.plugin-yml.bukkit
     @Input @Optional var description: String? = null
     @Input @Optional var load: PluginLoadOrder? = null
     @Input @Optional var author: String? = null
@@ -53,6 +53,7 @@ class BukkitPluginDescription(project: Project) : PluginDescription {
     @Input @Optional @JsonProperty("default-permission") var defaultPermission: Permission.Default? = null
     @Input @Optional var provides: List<String>? = null
     @Input @Optional var libraries: List<String>? = null
+    @Input @Optional var folia-supported: Boolean? = False
 
     @Nested val commands: NamedDomainObjectContainer<Command> = project.container(Command::class.java)
     @Nested val permissions: NamedDomainObjectContainer<Permission> = project.container(Permission::class.java)
